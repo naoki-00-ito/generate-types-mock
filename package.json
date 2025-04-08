@@ -6,7 +6,9 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "buf:generate": "npx buf generate",
+    "buf:lint": "npx buf lint"
   },
   "dependencies": {
     "next": "15.2.4",
