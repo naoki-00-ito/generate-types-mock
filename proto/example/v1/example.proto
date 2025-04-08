@@ -1,0 +1,28 @@
+syntax = "proto3";
+
+package example.v1;
+
+import "google/protobuf/timestamp.proto";
+
+service ExampleService {
+  rpc Example(ExampleRequest) returns (ExampleResponse) {};
+}
+
+// Example message
+message Example {
+  string id = 1;
+  string name = 2;
+  string description = 3;
+  google.protobuf.Timestamp created_at = 4;
+}
+
+// Example request message
+message ExampleRequest {
+  string id = 1;
+}
+
+// Example response message
+message ExampleResponse {
+  Example example = 1;
+}
+
