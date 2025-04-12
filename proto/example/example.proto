@@ -1,14 +1,18 @@
 syntax = "proto3";
 
-package example.v1;
+package example;
 
 import "google/protobuf/timestamp.proto";
+import "google/api/annotations.proto";
 
 service ExampleService {
-  rpc Example(ExampleRequest) returns (ExampleResponse) {};
+  rpc Example(ExampleRequest) returns (ExampleResponse) {
+    option (google.api.http) = {
+      get: "/example/get/{id}"
+    };
+  };
 }
 
-// Example message
 message Example {
   string id = 1;
   string name = 2;
@@ -16,13 +20,10 @@ message Example {
   google.protobuf.Timestamp created_at = 4;
 }
 
-// Example request message
 message ExampleRequest {
   string id = 1;
 }
 
-// Example response message
 message ExampleResponse {
   Example example = 1;
 }
-
