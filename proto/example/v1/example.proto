@@ -1,16 +1,16 @@
 syntax = "proto3";
 
-package example;
+package example.v1;
 
 import "google/protobuf/timestamp.proto";
 import "google/api/annotations.proto";
 
 service ExampleService {
-  rpc Example(ExampleRequest) returns (ExampleResponse) {
+  rpc GetExample(ExampleRequest) returns (ExampleResponse) {
     option (google.api.http) = {
-      get: "/example/get/{id}"
+      get: "/v1/examples/{id}"
     };
-  };
+  }
 }
 
 message Example {
