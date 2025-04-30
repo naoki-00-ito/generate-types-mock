@@ -42,3 +42,7 @@ next-env.d.ts
 
 # protobuf output
 gen
+
+# mock
+public/mockServiceWorker.js
+src/mocks
