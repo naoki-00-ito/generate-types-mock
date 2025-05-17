@@ -9,7 +9,7 @@
     "lint": "next lint",
     "buf:generate": "npx buf generate",
     "buf:lint": "npx buf lint",
-    "generate-types": "npx msw-auto-mock gen/example/v1/example.swagger.json -o ./src/mocks --base-url=http://localhost:3001 --typescript"
+    "generate-mock": "npx msw-auto-mock gen/example/v1/example.swagger.json -o ./src/mocks --base-url=http://localhost:3001 --typescript"
   },
   "dependencies": {
     "next": "15.2.4",
